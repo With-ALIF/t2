@@ -1,0 +1,255 @@
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+  background:#f6f7fb;color:#111;line-height:1.4;
+  padding:12px;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+}
+
+.topbar{
+  width:100%;
+  position:relative;
+  padding:4px 0;
+  background:transparent;
+}
+
+.left-action{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  width:100%;
+}
+
+.brand{
+  width:100%;
+  background:#2C4B9B;
+  padding:12px 14px;
+  border-radius:10px;
+  text-align:center;
+  font-size:20px;
+  font-weight:800;
+  color:#e0e3eb;
+  margin-top:18px;
+  box-shadow:0 6px 14px rgba(14,16,20,0.05);
+}
+
+.container{
+  max-width:1000px;
+  margin:12px auto;
+  background:#fff;
+  border-radius:10px;
+  padding:14px 16px;
+  box-shadow:0 8px 24px rgba(16,24,40,0.04);
+  display:block;
+}
+
+.container h2{
+  font-size:18px;
+  background:#fff;
+  border:1px solid rgba(15,23,42,0.035);
+  padding:10px 12px;
+  border-radius:8px;
+  width:100%;
+  margin-bottom:10px;
+  font-weight:700;
+}
+
+.hint{
+  color:#6b7280;
+  margin-bottom:10px;
+  font-size:14px;
+}
+
+.search-area{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  width:100%;
+  margin-bottom:12px;
+}
+
+.input-search{
+  width:100%;
+  padding:10px 12px;
+  border-radius:8px;
+  border:1px solid #e6e9ef;
+  background:#fbfcfe;
+  font-size:14px;
+  box-shadow:inset 0 1px 0 rgba(2,6,23,0.02);
+  transition:border .12s ease;
+}
+
+.input-search:hover{
+  border-color:#c7d2fe;
+}
+
+.radio-group{
+  width:100%;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  gap:12px;
+  padding:8px;
+  border:1px solid #e6e9ef;
+  border-radius:8px;
+  background:#fafafa;
+  transition:border .12s ease;
+}
+
+.radio-group label{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-weight:600;
+  cursor:pointer;
+  white-space:nowrap;
+  font-size:14px;
+}
+
+.radio-group input[type="radio"]{
+  margin:0;
+  transform-origin:center;
+}
+
+.radio-group input[type="radio"]:hover{
+  transform:scale(1.05);
+}
+
+@media (max-width: 600px){
+  .radio-group{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:8px;
+  }
+  .radio-group label{
+    white-space:normal;
+  }
+}
+
+.input-date {
+  padding:8px 10px;
+  border:1px solid #e6e9ef;
+  border-radius:8px;
+  background:#fff;
+  color:#0b1220;
+  font-size:14px;
+}
+.input-date:focus {
+  outline: none;
+  border-color: #2b6cb0;
+  box-shadow: 0 0 0 3px rgba(43,108,176,0.12);
+}
+
+.btn{
+  display:flex;
+  width:100%;
+  gap:8px;
+}
+
+.btnsave,.btnclear{
+  flex:1;
+  padding:10px 12px;
+  border-radius:8px;
+  font-weight:700;
+  cursor:pointer;
+  border:none;
+  transition:all .12s ease;
+  box-shadow:0 3px 10px rgba(0,0,0,0.04);
+  font-size:14px;
+}
+
+.btnsave{
+  background:#3b82f6;
+  color:#fff;
+}
+
+.btnsave:hover{
+  background:#2563eb;
+  transform:translateY(-1px);
+}
+
+.btnclear{
+  background:#f1f5f9;
+  color:#111;
+}
+
+.btnclear:hover{
+  background:#e2e8f0;
+  transform:translateY(-1px);
+}
+
+hr{
+  margin:12px 0;
+  border:none;
+  border-top:1px solid #f0f0f0;
+}
+
+h3{
+  font-size:15px;
+  margin-bottom:6px;
+  font-weight:700;
+}
+
+.small{
+  font-size:13px;
+  color:#6b7280;
+  margin-bottom:6px;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  background:transparent;
+}
+
+thead th{
+  text-align:left;
+  padding:8px 10px;
+  font-size:13px;
+  color:#374151;
+  background:transparent;
+  font-weight:700;
+  border-bottom:1px solid #f1f5f9;
+}
+
+tbody td{
+  padding:8px 10px;
+  font-size:13px;
+  border-bottom:1px dashed #f3f4f6;
+  color:#0f172a;
+}
+
+tbody tr:nth-child(even){
+  background:transparent;
+}
+
+tbody tr:hover{
+  background:rgba(59,130,246,0.03);
+}
+
+table[aria-live]{
+  width:100%;
+  overflow:hidden;
+  border-radius:6px;
+}
+
+@media (max-width:920px){
+  thead th:nth-child(4),thead th:nth-child(5),thead th:nth-child(6),
+  tbody td:nth-child(4),tbody td:nth-child(5),tbody td:nth-child(6){display:none}
+  .small{display:none}
+}
+
+@media (max-width:560px){
+  body{padding:8px}
+  .topbar{padding:6px}
+  .search-area{gap:8px}
+  .btn{flex-direction:column}
+  .container{padding:12px}
+  tbody td{padding:8px}
+  .brand{font-size:18px;padding:10px 12px;margin-top:12px}
+}
+
+input,button,select,textarea{
+  font-family:inherit;
+}
