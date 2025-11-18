@@ -4,21 +4,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Student Management</title>
-   
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Font+Name&display=swap">
-    <link rel="stylesheet" href="/assest/present.css">
-    <link rel="stylesheet" href="/nav.css">
+
+    <!-- তোমার typo "assest" 그대로 রাখা হয়েছে -->
+    <link rel="stylesheet" href="assest/present.css">
+    <link rel="stylesheet" href="nav.css">
   </head>
-  <style>
-  </style>
+
   <body>
-   
+
     <div id="attendance"></div>
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    // present.html ফাইলটি fetch করে attendance div এ ঢোকাবে
-    fetch("/src/present.html")
+    // শুধু leading slash / সরানো হয়েছে (মূল সমস্যা)
+    fetch("src/present.html")
       .then(response => {
         if (!response.ok)
           throw new Error("Network error: " + response.status);
@@ -34,7 +35,6 @@
       });
   });
 </script>
-   
-  
+
   </body>
 </html>
