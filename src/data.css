@@ -150,9 +150,125 @@ select:focus {
     transition: transform 0.08s ease, box-shadow 0.08s;
 }
 
-.btn-hover {
+.btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 18px 
     rgba(9, 30, 46, 0.06);
 }
 
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-primary {
+    background: #0ea5a0;
+    color: #fff;
+    border-color: rgba(14, 165, 160, 0.18);
+    box-shadow: 0 8px 26px
+    rgba(14, 165, 160, 0.08);
+}
+
+#clearForm {
+    background: red;
+    color: #e7e9ec;
+    border: 1px solid #e2e8f0;
+}
+
+.error {
+    color: #b91c1c;
+    background: rgba(185, 28, 28, 0.06);
+    padding: 8px 10px;
+    border-radius: 8px;
+    font-size: .9rem;
+    display: none;
+}
+
+.controls .error {
+    order: 3;
+}
+
+
+.table-warped {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 6px 18px
+    rgba(9, 30, 46, .05);
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    background: transparent;
+    min-width: 650px;
+}
+
+.table-warped thead th {
+    background: #f8fbfc;
+    color: black;
+    text-align: l
+    eft;
+    padding: 12px 14px;
+    font-size: .92rem;
+    font-weight: 700;
+    border-bottom: 1px solid #e6eef4;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+.table-warped tbody td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #f1f6f9;
+    font-size: .92rem;
+    color: #102029;
+}
+
+.table-warped tbody tr:hover {
+    background: #fbfdff;
+}
+
+.table-warped tbody td:nth-child(1) {
+    width: 56px;
+    color: #475569;
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .row {
+        padding: 16px;
+        gap: 12px;
+    }
+
+    .row >div {
+        grid-column: 1 / -1;
+    }
+    .row > .controls {
+        justify-content: flex-start;
+    }
+    .small {
+        width: 48%;
+    }
+    .Title{
+        font-size: 1.25rem;
+    }
+    .input-date{
+        width: 100%;
+    }
+}
+
+@media(max-width: 520px) {
+    .table-warped {
+        max-height: 300px;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
